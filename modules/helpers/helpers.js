@@ -2,14 +2,16 @@
 const helpers = {
 	
 	display : function(queue) {
+		const displayArr = []
 		if (queue.first === null) {
-			return
+			return null
 		}
 		let current = queue.last;
 		while (current !== null) {
-			console.log(current.data);
+			displayArr.push(current.data);
 			current = current.next
 		}
+		return displayArr;
 	},
 
 	peek : function(queue) {

@@ -11,7 +11,9 @@ store.people.forEach(person => people.enqueue(person))
 
 module.exports = {
   get() {
-    return helpers.display(people);
+    return {
+      inLine: helpers.display(people)
+    }
   },
 
   enqueue(person) {

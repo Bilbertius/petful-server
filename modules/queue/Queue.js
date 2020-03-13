@@ -52,14 +52,16 @@ class Queue {
 }
 
 function display(queue) {
+  const displayArr = []
   if (queue.first === null) {
-    return
+    return null
   }
-  let current = queue.last;
-  while (current !== null) {
-    console.log(current.data);
-    current = current.next
+    let current = queue.last;
+    while (current !== null) {
+      displayArr.push(current.data);
+      current = current.next
   }
+  return displayArr;
 }
 
 function peek(queue) {
