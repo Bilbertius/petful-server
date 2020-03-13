@@ -14,10 +14,12 @@ PetsRouter
 	
 
 	})
+	.route('/dog')
 	.delete(json, (req, res) => {
-	res.status(200).send(PetsService.dequeue());
-	
-	
-	});
-
+		res.status(200).send(PetsService.dequeue('dog'));
+	})
+	.route('/cat')
+	.delete(json, (req, res) => {
+		res.status(200).send(PetsService.dequeue('cat'));
+	})
 module.exports = PetsRouter;
