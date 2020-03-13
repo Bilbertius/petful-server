@@ -2,7 +2,7 @@
 const helpers = {
 	
 	display : function(queue) {
-		const displayArr = []
+		const displayArr = [];
 		if (queue.first === null) {
 			return null
 		}
@@ -24,5 +24,5 @@ const helpers = {
 	isEmpty : function(queue) {
 	return peek(queue) === null;
 	}
-}
+};
 module.exports = helpers;
