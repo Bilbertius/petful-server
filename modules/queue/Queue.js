@@ -18,15 +18,12 @@ class Queue {
     if (this.first === null) {
       this.first = node
     }
-    //if the queue isnt empty
-    //take the node that is currently
-    //at the end of the queue
-    // link it to the new node
+
     if (this.last) {
       node.next = this.last;
       this.last.prev = node;
     }
-    //make the new node the last item on the queue
+
     this.last = node;
   }
   
@@ -38,13 +35,13 @@ class Queue {
     let first = this.first;
     this.first = first.prev;
     
-    //if this is the last item in the queue/there is only 1 item in queue
+    
     if (first === this.last) {
       this.first = null;
       this.last = null;
     } else {
       this.first.next = null;
-      //causes problems
+  
     }
     
     return first.data
