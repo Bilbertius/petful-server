@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-	origin: '*',
+	origin: 'https://a-pet-io-ful.now.sh/',
 	methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 	preflightContinue: false,
 	optionsSuccessStatus: 204
