@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const {CLIENT_ORIGIN} = require('../../config')
+const { CLIENT_ORIGIN }= require('../../config.js')
 
 app.use(function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", `${CLIENT_ORIGIN}/*`); // update to match the domain you will make the request from
+	res.header("Access-Control-Allow-Origin", `${congif.CLIENT_ORIGIN}/*`); // update to match the domain you will make the request from
 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 	next();
 });
