@@ -7,7 +7,7 @@ const helpers = require('../helpers/helpers');
 const pets = {
   cats: new Queue(),
   dogs: new Queue()
-}
+};
 
 store.cats.forEach(cat => pets.cats.enqueue(cat));
 store.dogs.forEach(dog => pets.dogs.enqueue(dog));
